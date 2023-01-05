@@ -24,9 +24,6 @@ jobs:
           mkdir workdir
           bsdtar -xpf ArchLinuxARM-aarch64-latest.tar.gz -C workdir
           
-          mount -t proc /proc ./workdir/proc
-          mount -t sysfs /sys ./workdir/sys
-          mount -o bind /dev ./workdir/dev
           unlink ./workdir/etc/resolv.conf
           echo "nameserver 1.1.1.1" > ./workdir/etc/resolv.conf
           
